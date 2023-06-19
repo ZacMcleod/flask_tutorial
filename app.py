@@ -7,6 +7,7 @@ from flask_restful import Api, Resource
 from dotenv import load_dotenv
 from os import environ
 
+
 load_dotenv()
 
 # Create App instance
@@ -23,7 +24,11 @@ CORS(app)
 Migrate(app, db)
 
 # Models
-
+class Car(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    make = db.Column(db.String(255), nullable = False)
+    model = db.Column(db.String(255), nullable = False)
+    year = db.Column(db.Integer)
 
 
 # Schemas
