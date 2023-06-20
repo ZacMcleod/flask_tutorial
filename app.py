@@ -26,8 +26,8 @@ Migrate(app, db)
 # Models
 class Car(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    make = db.Column(db.String(255), nullable = False)
-    model = db.Column(db.String(255), nullable = False)
+    make = db.Column(db.String(255))
+    model = db.Column(db.String(255))
     year = db.Column(db.Integer)
 
     def repr (self):
